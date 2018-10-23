@@ -1,4 +1,4 @@
-  <div class="grid logo-container logoHasMoved" ng-class="{logoHasMoved: logoTest == true}">
+<!-- <div class="grid logo-container logoHasMoved" ng-class="{logoHasMoved: logoTest == true}">
     <div class="grid__col--12">
       <div class="abs-cont  absLeft" ng-class="{absLeft: logoTest == true}" style="">
         <div class="abs">
@@ -15,7 +15,7 @@
 
   <div class="grid">
     <div class="grid__col--12">
-      <h1>Dhipsum</h1>
+      <h1>Lorem Zapsulum</h1>
       <p class="text-white">Para os amantes do Zap</p>
     </div>
   </div>
@@ -25,16 +25,15 @@
 
     <div class="grid__col&#45;&#45;4 display-lipsum-paragraphs">
 
-      <!--Paragraphs-->
       <div class="lipsum-num-paragraphs">
         <input name="lipsumParagraphs" value="3 Paragraphs" id="lipsumParagraphs" type="text" disabled="">
       </div>
       <div class="para-controls">
         <div class="lipsum-para-inc-dec" id="lipsumParagraphsDec">
-          <i class="ion-chevron-left" data-pack="default" data-tags="arrow, left"></i>
+          -
         </div>
         <div class="lipsum-para-inc-dec" id="lipsumParagraphsInc">
-          <i class="ion-chevron-right" data-pack="default" data-tags="arrow, right"></i>
+          +
         </div>
       </div>
 
@@ -55,13 +54,44 @@
     </div>
     <div class="grid__col&#45;&#45;5 generate-lipsum-col">
       <h1 id="generateMarkup" name="generateMarkup">
-        Generate Markup <i class="ion-chevron-right"></i>
+        GERAR ZAP <i class="ion-chevron-right"></i>
       </h1>
     </div>
-  </div><!-- Lipsum Tools -->
+  </div>
 
   <div class="grid">
     <div class="grid__col--12">
       <div id="lipsumWell" style="display: none"></div>
     </div>
-  </div><!-- Lipsum Well -->
+  </div> -->
+<div class="content row pl-4">
+  <div></div>
+  <div class="row">
+    <div class="col">
+      <h1>Lorem <span class="text-zap">Zap</span>sulum</h1>
+      <p class="">Gerador de preenchimento de texto, mas me passa o seu <span class="text-zap">Zap</span></p>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <form class="row" [formGroup]="form" (ngSubmit)="onSubmit()" validate>
+        <div class="form-group w-75">
+          <select formControlName="paragraph" class="form-control" name="paragraph" [(ngModel)]="paragraph" required>
+            <option [ngValue]="undefined" selected>Número de parágrafos</option>
+            <option [ngValue]="1">1</option>
+            <option [ngValue]="2">2</option>
+            <option [ngValue]="3">3</option>
+            <option [ngValue]="4">4</option>
+          </select>
+        </div>
+        <div class="col w-25">
+          <button [disabled]="!form.valid" (click)="onClick()" #generate_btn type="button" class="btn btn-lg btn-outline-success">Gerar
+            Zap</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div #generated_txt class="w-100 col">
+  </div>
+  <div></div>
+</div>

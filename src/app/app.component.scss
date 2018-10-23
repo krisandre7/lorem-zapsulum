@@ -1,3 +1,34 @@
-.text-white {
-  color: white !important;
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+
+  .text-zap {
+    color: #26D366 !important;
+  }
+
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .btn {
+    color: #26D366;
+    border-color: #26D366;
+    margin-top: -1px;
+  }
+
+  select {
+    height: 46px;
+  }
+
+  .btn:hover {
+    color: white !important;
+    border-color: #26D366;
+    background-color: #26D366;
+  }
 }
+
