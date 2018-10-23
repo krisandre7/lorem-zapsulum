@@ -1,21 +1,67 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+  <div class="grid logo-container logoHasMoved" ng-class="{logoHasMoved: logoTest == true}">
+    <div class="grid__col--12">
+      <div class="abs-cont  absLeft" ng-class="{absLeft: logoTest == true}" style="">
+        <div class="abs">
 
-<router-outlet></router-outlet>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <ul class="profile-menu edit-lipsum fade ng-scope cta">
+
+  </ul>
+
+  <div class="grid">
+    <div class="grid__col--12">
+      <h1>Dhipsum</h1>
+      <p class="text-white">Para os amantes do Zap</p>
+    </div>
+  </div>
+
+
+  <div class="grid">
+
+    <div class="grid__col&#45;&#45;4 display-lipsum-paragraphs">
+
+      <!--Paragraphs-->
+      <div class="lipsum-num-paragraphs">
+        <input name="lipsumParagraphs" value="3 Paragraphs" id="lipsumParagraphs" type="text" disabled="">
+      </div>
+      <div class="para-controls">
+        <div class="lipsum-para-inc-dec" id="lipsumParagraphsDec">
+          <i class="ion-chevron-left" data-pack="default" data-tags="arrow, left"></i>
+        </div>
+        <div class="lipsum-para-inc-dec" id="lipsumParagraphsInc">
+          <i class="ion-chevron-right" data-pack="default" data-tags="arrow, right"></i>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="grid__col&#45;&#45;3 dirty-words" id="dirtyWords">
+      <span>Dirty Words</span>
+      <div class="squaredTwo">
+        <input type="checkbox" value="None" name="check" id="lipsumDirty">
+        <label for="lipsumDirty"></label>
+      </div>
+
+
+    </div>
+    <div class="grid__col&#45;&#45;5 generate-lipsum-col">
+      <h1 id="generateMarkup" name="generateMarkup">
+        Generate Markup <i class="ion-chevron-right"></i>
+      </h1>
+    </div>
+  </div><!-- Lipsum Tools -->
+
+  <div class="grid">
+    <div class="grid__col--12">
+      <div id="lipsumWell" style="display: none"></div>
+    </div>
+  </div><!-- Lipsum Well -->
