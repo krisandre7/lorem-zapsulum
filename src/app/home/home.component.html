@@ -1,0 +1,26 @@
+<div class="content pl-4 pr-4">
+  <div>
+    <div class="col pl-sm-0 pl-0">
+      <h1>Lorem <span class="text-zap">Zap</span>sulum</h1>
+      <p class="">Gerador de preenchimento de texto, mas me passa o seu <span class="text-zap">Zap</span></p>
+    </div>
+    <form class="row" [formGroup]="form" validate>
+      <div class="form-group w-50">
+        <select formControlName="paragraph" class="form-control" name="paragraph" [(ngModel)]="paragraph" required>
+          <option [ngValue]="undefined" selected>Número de parágrafos</option>
+          <option [ngValue]="1">1</option>
+          <option [ngValue]="2">2</option>
+          <option [ngValue]="3">3</option>
+          <option [ngValue]="4">4</option>
+        </select>
+      </div>
+      <div class="col w-50">
+        <button [disabled]="!form.valid" (click)="onClick()" #generate_btn type="button" class="btn btn-lg btn-outline-success">Gerar
+          Zap</button>
+      </div>
+    </form>
+    <a [routerLink]="'/form'">Quer sugerir mais frases?</a>
+  </div>
+</div>
+<div #generated_txt class="w-100 col">
+</div>

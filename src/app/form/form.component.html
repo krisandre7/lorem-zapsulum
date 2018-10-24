@@ -1,0 +1,14 @@
+<div class="text-center">
+  <h1>Mande suas sugestões pra mim!</h1>
+  <p>Eu vou avaliar o que você enviou e adicionar ao gerador se eu achar bom!</p>
+</div>
+<form class="row mx-0 px-3 pt-3" [formGroup]="form" (ngSubmit)="onSubmit(form)" validate>
+  <tag-input class="w-75" inputClass="suggestions" [errorMessages]="errorMessages" [validators]="validators"
+    [placeholder]="'Pressione Enter ou Retornar para adicionar'" [secondaryPlaceholder]="'Adicione suas sugestões aqui!'"
+    validator="validators" formControlName="phrases" [(ngModel)]='items'>
+  </tag-input>
+  <div class="w-25 pl-3">
+    <button (click)="onSubmit(form)" [disabled]="!form.valid" type="button" class="btn btn-lg btn-outline-success">Gerar
+      Zap</button>
+  </div>
+</form>
